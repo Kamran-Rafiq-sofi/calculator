@@ -1,0 +1,75 @@
+body {
+    margin-left: 40%;
+    margin-top: 10%;
+}
+
+@media (max-width:786px) {
+    body {
+        margin-left: 30%;
+        margin-top: 15%;
+    }
+}
+
+.table {
+    border-radius: 15px;
+    width: 15em;
+    height: 20em;
+
+    padding: 10px;
+
+    border: 2px solid black;
+    background-color: lavenderblush;
+}
+
+th {
+    border: none;
+}
+
+#rr {
+    width: 15em;
+    background-color: white;
+    color: black;
+    text-align: right;
+
+
+    height: 5em;
+    margin-bottom: 10px;
+    border-radius: 13px;
+    border: 1px solid black;
+
+
+
+}
+
+#rr:hover {
+    background-color: lavenderblush;
+    transition: 0.4s ease-in-out;
+}
+
+.buttons {
+    color: white;
+    margin-top: 10px;
+    background-color: palevioletred;
+    border: 1px solid black;
+    border-radius: 50%;
+
+    justify-content: space-around;
+    outline: blue;
+    border: 1px solid black;
+
+    height: 3em;
+    width: 3em;
+}
+
+.buttons:hover {
+    background-color: burlywood !important;
+    color: white !important;
+
+    transition: 0.6s ease-in-out !important;
+    cursor: pointer !important;
+}
+
+#zero {
+    width: 7em;
+    border-radius: 9%;
+}
