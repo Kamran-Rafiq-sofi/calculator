@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css"> -->
+    <link rel="stylesheet" type="text/css " href="style.css">
+    <title>Calculator Project</title>
+
+    
+</head>
+
+<body>
+
+    
+
+    <table border="1" class="table">
+        <caption>
+            <marquee scrollamount="4" width="40%">Calculator</marquee>
+        </caption>
+
+        <tr>
+            <th colspan="5"> <input type="text" id="rr" disabled></th>
+        </tr>
+
+        <tr>
+            <th><input class="buttons" type="button" value="Ac" onclick="equatezero()"></th>
+            <th><input class="buttons" type="button" value="+/-" onclick="changesign()"></th>
+            <th><input class="buttons" type="button" value="*" onclick="fun('*')"></th>
+            <!-- <th style="margin-top:10px;  border:1px solid black; border-radius:5px;"></th > -->
+            <th><input class="buttons" type="button" value="C" onclick="clearScreen('C')"></th>
+        </tr>
+
+
+
+
+        <tr>
+            <th><input class="buttons" type="button" value="(" onclick=" fun(value)"></th>
+            <th><input class="buttons" type="button" value=")" onclick="fun(value)"></th>
+            <th><input class="buttons" type="button" value="%" onclick=" fun( '%' )"></th>
+            <!-- <th style="margin-top:10px;  border:1px solid black; border-radius:5px;"></th > -->
+            <th><input class="buttons" type="button" value="00" onclick=" fun( '00' )"></th>
+        </tr>
+
+
+
+        <tr>
+            <th><input class="buttons" type="button" value="9" onclick="fun('9')"></th>
+            <th> <input class="buttons" type="button" value="8" onclick="fun('8')"></th>
+            <th> <input class="buttons" type="button" value="7" onclick="fun('7')"></th>
+            <!-- <th style="margin-top:10px;  border:1px solid black; border-radius:5px;">e</th> -->
+            <th> <input class="buttons" type="button" value="+" onclick="fun('+')"></th>
+        </tr>
+
+        <tr>
+            <th><input class="buttons" type="button" value="6" onclick="fun('6')"></th>
+            <th><input class="buttons" type="button" value="5" onclick="fun('5')"></th>
+            <th><input class="buttons" type="button" value="4" onclick="fun('4')"></th>
+            <!-- <th style="margin-top:10px;  border:1px solid black; border-radius:5px;"></th> -->
+            <th><input class="buttons" type="button" value="-" onclick="fun('-')"></th>
+        </tr>
+
+        <tr>
+            <th><input class="buttons" type="button" value="3" onclick="fun('3')"></th>
+            <th><input class="buttons" type="button" value="2" onclick="fun('2')"></th>
+            <th><input class="buttons" type="button" value="1" onclick="fun('1')"></th>
+            <!-- <th style="margin-top:10px;  border:1px solid black; border-radius:5px;"></th> -->
+            <th><input class="buttons" type="button" value="/" onclick="fun('/')"></th>
+        </tr>
+
+        <tr>
+            <th colspan="2"><input class="buttons" type="button" value="0" onclick="fun('0')" id="zero"></th>
+
+            <th colspan=""><input class="buttons" type="button" value="." onclick="fun('.')"></th>
+            <th> <input class="buttons" type="button" value="=" onclick="funr()"></th>
+            <!-- <th style="margin-top:10px;  border:1px solid black; border-radius:5px;">*</th> -->
+        </tr>
+    </table>
+    </div>
+    </div>
+
+    <!-- <script src="bootstrap/jquery-3.6.2.min.js"></script>
+<script src="bootstrap/js/bootstrap.min.js"></script> -->
+    <script>
+
+        function changesign(value) {
+
+
+
+
+            if (document.getElementById("rr").value == '+') {
+                document.getElementById("rr").value = '-';
+            }
+            else {
+                document.getElementById("rr").value = '+';
+            }
+        }
+        function equatezero() {
+            document.getElementById("rr").value = "";
+
+
+        }
+
+        function clearScreen(value) {
+            document.getElementById("rr").value = "";
+
+
+        }
+
+
+
+        function fun(value) {
+            document.getElementById("rr").value += value;
+
+        }
+
+
+
+        function funr() {
+            let p = document.getElementById("rr").value;
+            let q = eval(p);
+            document.getElementById("rr").value = q;
+        }
+
+    </script>
+</body>
+
+</html>
